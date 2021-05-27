@@ -11,7 +11,11 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'pages/about.html')
+    teams = Teams.objects.all()
+    data = {
+        'teams': teams
+    }
+    return render(request, 'pages/about.html', data)
 
 
 def contact(request):
