@@ -132,7 +132,7 @@
                 <div class="slick-slide-item">
                     <div class="car-box-3">
                         <div class="car-thumbnail">
-                            <a href="car-details.html" class="car-img">
+                            <a href="{% url 'cars:car_detail' featured_car.id %}" class="car-img">
                                 <div class="tag-2">Featured</div>
                                 <div class="price-box">
                                     <span>{{ featured_car.price | intcomma }}$</span>
@@ -171,10 +171,10 @@
                         </div>
                         <div class="detail">
                             <h1 class="title">
-                                <a href="car-details.html">{{ featured_car.car_title }}</a>
+                                <a href="{% url 'cars:car_detail' featured_car.id %}">{{ featured_car.car_title }}</a>
                             </h1>
                             <div class="location">
-                                <a href="car-details.html">
+                                <a href="{% url 'cars:car_detail' featured_car.id %}">
                                     <i class="flaticon-pin"></i>{{ featured_car.state }} {{ featured_car.city }}
                                 </a>
                             </div>
@@ -217,7 +217,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="car-thumbnail">
-                        <a href="car-details.html" class="car-img">
+                        <a href="{% url 'cars:car_detail' all_car.id %}" class="car-img">
                             <div class="tag">For Sale</div>
                             <img class="d-block w-100" src="{{ all_car.car_photo.url }}" alt="car" style="min-height: 262px; max-height: 262px;">
                             <div class="facilities-list clearfix">
@@ -266,10 +266,10 @@
                     </div>
                     <div class="detail">
                         <h1 class="title">
-                            <a href="car-details.html">{{ all_car.car_title }}</a>
+                            <a href="{% url 'cars:car_detail' all_car.id %}">{{ all_car.car_title }}</a>
                         </h1>
                         <div class="location">
-                            <a href="car-details.html">
+                            <a href="{% url 'cars:car_detail' all_car.id %}">
                                 <i class="flaticon-pin"></i>{{ all_car.state }} {{ all_car.city }}
                             </a>
                         </div>

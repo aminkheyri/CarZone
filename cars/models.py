@@ -109,6 +109,7 @@ class Car(models.Model):
     passengers = models.PositiveIntegerField()
     vin_no = models.CharField(max_length=100, unique=True)
     mileage = models.IntegerField()
+    miles = models.IntegerField()
     fuel_type = models.CharField(max_length=120)
     number_of_owners = models.CharField(max_length=120)
     is_featured = models.BooleanField(default=False)
